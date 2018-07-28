@@ -38,7 +38,7 @@ if tmp < 0:
     raise ValueError 
     
 print('The 20th Fibonacci Number is {}'.format(F_2))
-# using array:
+# using list:
 fibonacciList = [1, 1]
 for i in range(2, 20):
     newElement = fibonacciList[i-2] + fibonacciList[i-1]
