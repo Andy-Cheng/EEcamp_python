@@ -47,8 +47,11 @@ for i in range(2, 20):
     print('length is:', len(fibonacciList))
 
 ### While ###
-while True:
+whileCount = 0
+while (whileCount<10):
     print('我在電機營')
+    whileCount += 1
+
 ### practice 3 ###
 operationCount = 0
 x = 100
@@ -70,7 +73,7 @@ n = 123
 d = {'EECAMP': 2018, 'name': '鄭人豪', 'height': 187, n: 456}
 s = 'name'
 d[s] = '趙崇皓'
-d[height] = 183
+d['height'] = 183
 d.setdefault('weight', '祕密不跟你說')
 d['性向'] = '男性'
 del d['性向'] 
@@ -78,7 +81,11 @@ d['性別'] = '男性'
 d.keys()
 d.values()
 d.pop(123)
-d[123] # an error raised here
+try:
+    d[123] # an error raised here
+    
+except :
+    pass
 
 ###     Basic I/O and string      ###
 print('歡迎大家參加電機營')
@@ -87,7 +94,10 @@ print(len(s))
 for i in range(len(s)):
     print(s[i])
 print(s[1:3])
-s[-1] = '9' # an error raised here
+try:
+    s[-1] = '9' # an error raised here
+except:
+    pass
 print(2* s)
 s = s + ' gogog!'
 print(s)
@@ -116,7 +126,7 @@ def FizzBuzz(x):
         if (x%15 == 0):
             print('fizzbuz')
         else:
-        print('fizz')            
+            print('fizz')            
     elif (x%5 == 0):
         if (x%15 == 0):
             print('fizzbuz')
